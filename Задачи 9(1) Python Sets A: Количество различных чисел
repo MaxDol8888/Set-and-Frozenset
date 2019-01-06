@@ -1,0 +1,12 @@
+#Hapilin
+
+print(len(set([int(i) for i in input().split()])))
+
+
+print(len(set(input().split())))
+
+
+a = set(input().split())
+print(len(a))
+
+
