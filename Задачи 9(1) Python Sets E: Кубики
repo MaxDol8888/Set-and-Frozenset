@@ -1,0 +1,66 @@
+#Hapilin
+
+n,m = [int(i) for i in input().split()]
+a = []
+b = []
+for i in range(n):
+    k = int(input())
+    a.append(k)
+a = set(a)
+for j in range(m):
+    k = int(input())
+    b.append(k)
+b = set(b)
+e = a.intersection(b)
+print(len(e))
+e = sorted(e)
+print(*e)
+q = a.difference(b)
+print(len(q))
+q = sorted(q)
+print(*q)
+w = b.difference(a)
+print(len(w))
+w = sorted(w)
+print(*w)
+
+
+def print_set(some_set):
+    print(len(some_set))
+    print(*[str(item) for item in sorted(some_set)])
+
+N, M = [int(s) for s in input().split()]
+A_colors, B_colors = set(), set()
+for i in range(N):
+    A_colors.add(int(input()))
+for i in range(M):
+    B_colors.add(int(input()))
+    
+print_set(A_colors & B_colors)
+print_set(A_colors - B_colors)
+print_set(B_colors - A_colors)
+
+
+n, m = [int(i) for i in input().split()]
+Ann = {int(input()) for i in range(n)}
+Boris = {int(input()) for i in range(m)}
+print(len(Ann & Boris))
+print(' '.join([str(i) for i in sorted(Ann & Boris, key=int)]))
+print(len(Ann - Boris))
+print(' '.join([str(i) for i in sorted(Ann - Boris, key=int)]))
+print(len(Boris - Ann))
+print(' '.join([str(i) for i in sorted(Boris - Ann, key=int)]))
+
+
+N, M =[int(s) for s in input().split()]
+A, B= set(), set()
+for i in range(N):
+    A.add(int(input()))
+for i in range(M):
+    B.add(int(input()))
+print (len(A&B))
+print (*sorted(A&B))
+print (len(A-B))
+print (*sorted(A-B))
+print (len(B-A))
+print (*sorted(B-A))
