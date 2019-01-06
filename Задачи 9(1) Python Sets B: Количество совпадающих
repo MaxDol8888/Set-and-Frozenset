@@ -1,0 +1,22 @@
+#Hapilin
+
+a = set([int(i) for i in input().split()])
+b = set([int(i) for i in input().split()])
+print(len(a.intersection(b)))
+
+
+print(len(set(input().split()) & set(input().split())))
+
+
+a = input().split()
+b = input().split()
+q = {int(a[1])}
+z = {int(b[1])}
+for i in range(len(a)):
+    a[i] = int(a[i])
+    q.add(a[i])
+for i in range(len(b)):
+    b[i] = int(b[i])
+    z.add(b[i])
+q.intersection_update(b)
+print(len(q))
