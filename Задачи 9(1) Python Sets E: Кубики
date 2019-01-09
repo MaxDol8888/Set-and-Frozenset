@@ -1,4 +1,4 @@
-#Hapilin
+#Hapilin v.1
 
 n,m = [int(i) for i in input().split()]
 a = []
@@ -23,6 +23,28 @@ w = b.difference(a)
 print(len(w))
 w = sorted(w)
 print(*w)
+
+
+#Hapilin v.2
+
+n,m = [int(i) for i in input().split()]
+a = set()
+b = set()
+for i in range(n):
+    k = int(input())
+    a.add(k)
+for j in range(m):
+    k = int(input())
+    b.add(k)
+
+print(len(a.intersection(b)))
+print(*sorted(a.intersection(b)))
+
+print(len(a.difference(b)))
+print(*sorted(a.difference(b)))
+
+print(len(b.difference(a)))
+print(*sorted(b.difference(a)))
 
 
 def print_set(some_set):
