@@ -47,6 +47,24 @@ print(len(b.difference(a)))
 print(*sorted(b.difference(a)))
 
 
+#Alina
+
+def print(set(some_set)):
+    print(len(some_set))
+    print(*[str(item) for item in sorted(some_set)])
+ 
+N, M = [int(s) for s in input().split()]
+A, B = set(), set()
+for i in range(N):
+    A.add(int(input()))
+for i in range(M):
+    B.add(int(input()))
+     
+print(set(A & B))
+print(set(A - B))
+print(set(B - A))
+
+
 def print_set(some_set):
     print(len(some_set))
     print(*[str(item) for item in sorted(some_set)])
