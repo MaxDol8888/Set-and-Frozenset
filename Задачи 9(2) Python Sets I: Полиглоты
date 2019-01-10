@@ -1,0 +1,77 @@
+#Hapilin
+
+kolv = int(input())
+a = []
+for i in range(kolv):
+    a.append([])
+for i in range(kolv):
+    k = int(input())
+    for l in range(k):
+        a[i].append(str(input()))
+for el in range(kolv):
+    a[el]=set(a[el])
+vmeste = set.intersection(*a)
+print(len(vmeste))
+vmeste = sorted(vmeste)
+for el in vmeste:
+    print(el)
+otdelno = set.union(*a)
+print(len(otdelno))
+otdelno = sorted(otdelno)
+for elem in otdelno:
+    print(elem)
+    
+    
+students = [{input() for j in range(int(input()))} for i in range(int(input()))]
+known_by_everyone, known_by_someone = set.intersection(*students), set.union(*students)
+print(len(known_by_everyone), *sorted(known_by_everyone), sep='\n')
+print(len(known_by_someone), *sorted(known_by_someone), sep='\n')
+    
+    
+n_wk = int(input())
+
+odin_wk = set()
+vse_wk = {'English', 'Japanese', 'Russian', 'German', 'Spanish'}
+for i in range(n_wk) :
+    wk = int(input())
+    h = []
+    for j in range(wk) :
+        h.append(input())
+    odin_wk.update(set(h))
+    vse_wk &= set(h)
+print(len(vse_wk))
+for i in sorted(list(vse_wk)) :
+    print(i)
+print(len(odin_wk))
+for i in sorted(list(odin_wk)) : 
+    print(i)
+
+
+school = [{input() for j in range(int(input()))} for i in range(int(input()))]
+
+all_know = set(school[0])
+someone_know = set(school[0])
+for i in range(1, len(school)):
+    all_know &= school[i]
+    someone_know |= school[i]
+print(len(all_know), '\n'.join(sorted(all_know)),
+        len(someone_know), '\n'.join(sorted(someone_know)),
+        sep='\n')
+
+
+union = set()
+all = set()
+for i in range(int(input())):
+    m = int(input())
+    a = {input() for j in range(m)}
+    all.update(a)
+    if i == 1:
+        union.update(a)
+    else:
+        union &= a
+print(len(union))
+print('\n'.join(sorted(union)))
+print(len(all))
+print('\n'.join(sorted(all)))
+
+    
