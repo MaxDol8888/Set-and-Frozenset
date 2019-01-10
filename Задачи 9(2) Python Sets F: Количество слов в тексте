@@ -1,0 +1,33 @@
+#Hapilin
+
+k = int(input())
+s = set()
+for i in range(k):
+    s.update(input().split())
+print(len(s))
+
+
+words = set()
+for _ in range(int(input())):
+    words.update(input().split())
+print(len(words))
+
+
+k=int(input())
+s=set()
+list=[]
+l=0
+for i in range(k):
+    list=[str(j) for j in input().split()]
+    for j in range(len(list)):
+        s.add(list[j])
+print(len(s))
+
+
+n = int(input())
+a = set()
+for i in range(n):
+    s = input().split()
+    for j in range(len(s)):
+        a.add(s[j])
+print(len(a))
